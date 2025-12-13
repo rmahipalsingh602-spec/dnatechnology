@@ -4,41 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<!-- GOOGLE SEARCH CONSOLE VERIFY -->
 <meta name="google-site-verification" content="bj03IMlB1iNKspE_W5fhjY5OWqtKcyeaMrkBORKCsGM" />
 
 <!-- SEO -->
 <title>DNA Technology | Websites, Apps & AI Solutions</title>
-<meta name="description" content="DNA Technology builds modern, fast and affordable websites, apps and AI solutions for businesses and startups.">
-<meta name="keywords" content="DNA Technology, Website Developer India, Web Design, App Development, AI Tools">
+<meta name="description" content="DNA Technology builds modern websites, apps & AI solutions. Pay only if you like the demo. Starting at ₹999.">
+<meta name="keywords" content="DNA Technology, Website Developer India, One Page Website, Web Design, App Development">
 <meta name="author" content="Mahipal Singh Rathore">
 
-<!-- AOS Animation -->
+<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
-
-/* PRELOADER */
-#preloader{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:#0f2027;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-}
-.loader{
-    width:60px;
-    height:60px;
-    border:6px solid #00e6ff;
-    border-top:6px solid transparent;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
-}
-@keyframes spin{100%{transform:rotate(360deg);}}
 
 /* BODY */
 body{
@@ -47,32 +26,34 @@ body{
     background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     color:white;
     text-align:center;
-    overflow-x:hidden;
 }
 
+/* GLOW */
 @keyframes glow{
     0%{box-shadow:0 0 10px #00e6ff}
     50%{box-shadow:0 0 30px #00e6ff}
     100%{box-shadow:0 0 10px #00e6ff}
 }
 
-.container{padding:70px 20px}
+.container{padding:80px 20px}
+
 h1{font-size:44px}
 h1 span{color:#00e6ff;text-shadow:0 0 15px #00e6ff}
-p{max-width:850px;margin:auto;font-size:18px}
+
+p{max-width:900px;margin:auto;font-size:18px;line-height:1.6}
 
 /* BUTTONS */
 .buttons{
-    margin-top:60px;
+    margin-top:50px;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:22px;
+    gap:20px;
 }
 .demo-btn{
-    width:260px;
-    padding:18px;
-    font-size:18px;
+    width:250px;
+    padding:16px;
+    font-size:17px;
     font-weight:bold;
     border:none;
     border-radius:18px;
@@ -83,17 +64,39 @@ p{max-width:850px;margin:auto;font-size:18px}
 }
 .demo-btn:hover{transform:scale(1.1)}
 
+/* INFO BOX */
+.info-box{
+    margin-top:80px;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+}
+.info-box h2{color:#00e6ff}
+
+/* PRICING */
+.pricing{
+    margin-top:80px;
+}
+.price-box{
+    background:rgba(0,0,0,0.4);
+    padding:25px;
+    margin:20px auto;
+    max-width:500px;
+    border-radius:20px;
+}
+.price{font-size:32px;color:#00ffcc}
+
 /* SOCIAL */
-.social-section{margin-top:90px}
 .social-icons{
+    margin-top:50px;
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:18px;
 }
 .social-btn{
-    width:62px;height:62px;border-radius:50%;
+    width:60px;height:60px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;
-    font-size:26px;color:white;text-decoration:none;
+    font-size:24px;color:white;text-decoration:none;
 }
 .linkedin{background:#0077b5}
 .instagram{background:#dd2a7b}
@@ -102,44 +105,41 @@ p{max-width:850px;margin:auto;font-size:18px}
 .telegram{background:#229ED9}
 .email{background:#00c853}
 
-/* CONTACT */
-.contact{
-    margin-top:90px;
-    max-width:500px;
-    margin:auto;
+/* WHATSAPP FLOAT */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    font-size:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 0 25px rgba(0,0,0,0.7);
+    z-index:100;
 }
-input,textarea{
-    width:100%;
-    padding:14px;
-    margin:10px 0;
-    border-radius:10px;
-    border:none;
-}
-.send-btn{
-    background:#00e6ff;
-    color:#000;
-    padding:14px;
-    border:none;
-    border-radius:20px;
-    font-size:18px;
-}
+.whatsapp:hover{transform:scale(1.1)}
 
-footer{margin:80px 0;font-size:14px;opacity:0.8}
+footer{margin:80px 0;font-size:14px;opacity:0.85}
 </style>
 </head>
 
 <body>
 
-<div id="preloader"><div class="loader"></div></div>
-
 <div class="container">
+
 <h1 data-aos="zoom-in">DNA <span>Technology</span></h1>
 
 <p data-aos="fade-up">
 Modern tech company building attractive websites, apps & AI solutions for businesses and startups.
 </p>
 
-<div class="buttons">
+<div class="buttons" data-aos="fade-up">
 <button class="demo-btn" onclick="openDemo('boy.html')">Boy Web Demo</button>
 <button class="demo-btn" onclick="openDemo('girl.html')">Girl Web Demo</button>
 <button class="demo-btn" onclick="openDemo('cafe.html')">Cafe Web Demo</button>
@@ -147,29 +147,71 @@ Modern tech company building attractive websites, apps & AI solutions for busine
 <button class="demo-btn" onclick="openDemo('portfolio.html')">Portfolio Web Demo</button>
 </div>
 
-<div class="social-section">
-<h2>Connect With Us</h2>
+<!-- TRUST MESSAGE -->
+<div class="info-box" data-aos="fade-up">
+<h2>100% Trust Policy</h2>
+<p>
+<strong>Hindi:</strong>  
+पहले हम आपकी वेबसाइट बनाकर दिखाएँगे।  
+अगर आपको डिज़ाइन पसंद आए, तभी पैसे देने होंगे।  
+अगर पसंद नहीं आई – कोई चार्ज नहीं।
+</p>
+<p>
+<strong>English:</strong>  
+We create your website first.  
+Pay only if you like the design.  
+No satisfaction → No payment.
+</p>
+</div>
+
+<!-- PRICING -->
+<div class="pricing" data-aos="fade-up">
+<h2>Pricing</h2>
+
+<div class="price-box">
+<h3>One Page Website</h3>
+<p class="price">₹999</p>
+<p>Perfect for personal & small business</p>
+</div>
+
+<div class="price-box">
+<h3>Business Website (5 Pages)</h3>
+<p class="price">₹2999</p>
+<p>Professional business presence</p>
+</div>
+
+<div class="price-box">
+<h3>Advanced / Custom Website</h3>
+<p class="price">₹4999+</p>
+<p>Custom design + features</p>
+</div>
+</div>
+
+<!-- SOCIAL -->
+<h2 style="margin-top:80px">Connect With Us</h2>
 <div class="social-icons">
-<a class="social-btn linkedin" href="https://www.linkedin.com" target="_blank">in</a>
-<a class="social-btn instagram" href="#">📸</a>
-<a class="social-btn facebook" href="#">f</a>
-<a class="social-btn x" href="#">X</a>
-<a class="social-btn telegram" href="https://t.me/dnawebwork">✈</a>
-<a class="social-btn email" href="mailto:dna.project.ai@gmail.com">✉</a>
+<a href="https://www.linkedin.com/in/dna-technology-810091394" class="social-btn linkedin" target="_blank">in</a>
+<a href="https://www.instagram.com/DNAAiProject7" class="social-btn instagram" target="_blank">📸</a>
+<a href="https://www.facebook.com/share/1DBUf1suQH/" class="social-btn facebook" target="_blank">f</a>
+<a href="https://x.com/DNAProjectAi" class="social-btn x" target="_blank">X</a>
+<a href="https://t.me/dnawebwork" class="social-btn telegram" target="_blank">✈</a>
+<a href="mailto:dna.project.ai@gmail.com" class="social-btn email">✉</a>
 </div>
-</div>
-https://wa.me/917862963112?text=Hi%20I%20need%20a%20website
+
 </div>
 
 <footer>
 © 2025 DNA Technology | Visionary Mahipal Singh Rathore
 </footer>
 
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/917862963112?text=Hi%20I%20need%20a%20website" 
+   class="whatsapp" target="_blank">💬</a>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({duration:1200});
-window.onload=()=>document.getElementById("preloader").style.display="none";
-function openDemo(p){window.location.href=p;}
+AOS.init({duration:1200,once:true});
+function openDemo(page){window.location.href=page;}
 </script>
 
 </body>
