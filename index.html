@@ -1,118 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact DNA Technology</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<!-- SEO -->
+<title>DNA Technology | Websites, Apps & AI Solutions</title>
+<meta name="description" content="DNA Technology builds modern, fast and affordable websites, apps and AI solutions for businesses and startups.">
+<meta name="keywords" content="DNA Technology, Website Developer India, Web Design, App Development, AI Tools">
+<meta name="author" content="Mahipal Singh Rathore">
 
-        .contact-box {
-            background: rgba(0,0,0,0.6);
-            padding: 30px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 0 25px rgba(0,255,255,0.4);
-        }
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #00ffff;
-        }
+<style>
+*{box-sizing:border-box}
 
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 6px;
-            outline: none;
-            font-size: 14px;
-        }
+/* PRELOADER */
+#preloader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#0f2027;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+.loader{
+    width:60px;
+    height:60px;
+    border:6px solid #00e6ff;
+    border-top:6px solid transparent;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+@keyframes spin{100%{transform:rotate(360deg);}}
 
-        textarea {
-            resize: none;
-            height: 120px;
-        }
+/* BODY */
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
 
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #00ffff;
-            color: #000;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* GLOW */
+@keyframes glow{
+    0%{box-shadow:0 0 10px #00e6ff}
+    50%{box-shadow:0 0 30px #00e6ff}
+    100%{box-shadow:0 0 10px #00e6ff}
+}
 
-        button:hover {
-            background: #00cccc;
-        }
+.container{padding:70px 20px}
 
-        .success {
-            display: none;
-            text-align: center;
-            color: #00ff99;
-            margin-top: 15px;
-        }
-    </style>
+h1{font-size:44px}
+h1 span{color:#00e6ff;text-shadow:0 0 15px #00e6ff}
+
+p{max-width:850px;margin:auto;font-size:18px}
+
+/* DEMO BUTTONS */
+.buttons{
+    margin-top:60px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:22px;
+}
+.demo-btn{
+    width:260px;
+    padding:18px;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    background:linear-gradient(135deg,#ff00cc,#3333ff);
+    color:white;
+    animation:glow 2.5s infinite;
+    transition:0.4s;
+}
+.demo-btn:hover{transform:scale(1.12)}
+
+/* SOCIAL */
+.social-section{margin-top:90px}
+.social-icons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.social-btn{
+    width:62px;height:62px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:26px;color:white;text-decoration:none;
+    transition:0.4s;
+}
+.social-btn:hover{transform:scale(1.2)}
+.linkedin{background:#0077b5}
+.instagram{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}
+.facebook{background:#1877f2}
+.x{background:#000}
+.telegram{background:#229ED9}
+.email{background:#00c853}
+
+/* CONTACT FORM */
+.contact{
+    margin-top:90px;
+    max-width:500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+input,textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border-radius:10px;
+    border:none;
+    font-size:16px;
+}
+.send-btn{
+    background:#00e6ff;
+    color:#000;
+    padding:14px;
+    border:none;
+    border-radius:20px;
+    font-size:18px;
+    cursor:pointer;
+    width:100%;
+}
+
+/* SUCCESS MESSAGE */
+#success{
+    display:none;
+    margin-top:15px;
+    color:#00ffcc;
+    font-weight:bold;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    font-size:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+    z-index:100;
+}
+.whatsapp:hover{transform:scale(1.1)}
+
+footer{margin:80px 0;font-size:14px;opacity:0.8}
+</style>
 </head>
+
 <body>
 
-<div class="contact-box">
-    <h2>Contact DNA Technology</h2>
+<!-- PRELOADER -->
+<div id="preloader"><div class="loader"></div></div>
 
-    <form id="contactForm" action="https://formspree.io/f/xgvgdlzr" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+<div class="container">
+<h1 data-aos="zoom-in">DNA <span>Technology</span></h1>
 
-        <!-- Optional security -->
-        <input type="hidden" name="_captcha" value="false">
+<p data-aos="fade-up">
+Modern tech company building attractive websites, apps & AI solutions for businesses and startups.
+</p>
 
-        <button type="submit">Send Message</button>
-    </form>
-
-    <div class="success" id="successMsg">
-        ✅ Message Sent Successfully!
-    </div>
+<div class="buttons" data-aos="fade-up">
+<button class="demo-btn" onclick="openDemo('boy.html')">Boy Web Demo</button>
+<button class="demo-btn" onclick="openDemo('girl.html')">Girl Web Demo</button>
+<button class="demo-btn" onclick="openDemo('cafe.html')">Cafe Web Demo</button>
+<button class="demo-btn" onclick="openDemo('business.html')">Business Web Demo</button>
+<button class="demo-btn" onclick="openDemo('portfolio.html')">Portfolio Web Demo</button>
 </div>
 
+<!-- SOCIAL -->
+<div class="social-section">
+<h2 data-aos="zoom-in">Connect With Us</h2>
+<div class="social-icons">
+<a href="https://www.linkedin.com/in/dna-technology-810091394" class="social-btn linkedin" target="_blank">in</a>
+<a href="https://www.instagram.com/DNAAiProject7" class="social-btn instagram" target="_blank">📸</a>
+<a href="https://www.facebook.com/share/1DBUf1suQH/" class="social-btn facebook" target="_blank">f</a>
+<a href="https://x.com/DNAProjectAi" class="social-btn x" target="_blank">𝕏</a>
+<a href="https://t.me/dnawebwork" class="social-btn telegram" target="_blank">✈</a>
+<a href="mailto:dna.project.ai@gmail.com" class="social-btn email">✉</a>
+</div>
+</div>
+
+<!-- CONTACT FORM (FORMSPREE WORKING) -->
+<div class="contact" data-aos="fade-up">
+<h2>Contact DNA Technology</h2>
+
+<form action="https://formspree.io/f/xgvgdlzr" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
+<!-- OPTIONAL -->
+<input type="hidden" name="_subject" value="New Contact from DNA Technology Website">
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit" class="send-btn">Send Message</button>
+</form>
+
+<div id="success">✅ Message sent successfully!</div>
+</div>
+
+</div>
+
+<footer>
+© 2025 DNA Technology | Visionary Mahipal Singh Rathore
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919999999999" class="whatsapp" target="_blank">💬</a>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    const form = document.getElementById("contactForm");
-    const successMsg = document.getElementById("successMsg");
+AOS.init({duration:1200,once:true});
 
-    form.addEventListener("submit", async function(e) {
-        e.preventDefault();
+window.onload=function(){
+document.getElementById("preloader").style.display="none";
+}
 
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-            form.reset();
-            successMsg.style.display = "block";
-        } else {
-            alert("❌ Error! Please try again.");
-        }
-    });
+function openDemo(page){
+    window.location.href=page;
+}
 </script>
 
 </body>
